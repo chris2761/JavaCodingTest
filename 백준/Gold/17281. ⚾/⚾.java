@@ -37,7 +37,6 @@ public class Main {
 
 		do {
 			if (order[4] == 1) {
-				//System.out.println(Arrays.toString(order));
 				int result = 0;
 				int ind = 1;
 				// 게임별로 차례로 진행
@@ -46,7 +45,6 @@ public class Main {
 					int roo[] = new int[3]; // 1,2,3루
 					int outCnt = 0; // 아웃 횟수
 					while (outCnt < 3) {
-						// System.out.println(result + " " + ind + " " + curPlayer[ind]);
 						if (curPlayer[order[ind]] == 0) { // 아웃이면
 							outCnt++;
 						} else if (curPlayer[order[ind]] == 4) { // 홈런이면
@@ -59,14 +57,13 @@ public class Main {
 							result += 1; // 타자도 점수 추가
 						} else
 							result += movePlayer(roo, curPlayer[order[ind]]);
+							//안타면 한번 옮기고 2루타면 2번 옮기고 3루타면 3번 옮기고
 						ind++;
+						//선수 다 돌았으면 다시 첫번째 선수
 						if (ind == 10)
 							ind = 1;
-						//System.out.println(Arrays.toString(roo));
-						//System.out.println(result);
 					}
 				}
-				//System.out.println("*" + result);
 				maxResult = Math.max(result, maxResult);
 			}
 
@@ -75,6 +72,7 @@ public class Main {
 
 	}
 
+	//선수 옮기기
 	private static int movePlayer(int[] roo, int cnt) {
 		int score = 0;
 		for (int i = 0; i < cnt; i++) { // 안타면 1번 옮기고 2루타면 2번 옮기고 3루타면 3번 옮기고
