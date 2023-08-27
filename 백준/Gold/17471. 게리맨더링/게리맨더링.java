@@ -83,17 +83,11 @@ public class Main {
 				int bPeopleCnt = total - aPeopleCnt;
 				int curMin = Math.abs(aPeopleCnt - bPeopleCnt);
 				if (curMin < result) {
-					//System.out.println(Arrays.toString(isA));
 					result = curMin;
-					//System.out.println(aPeopleCnt+" "+bPeopleCnt+" "+result);
 				}
-				// System.out.println(Arrays.toString(visitedAll));
 
 			} while (np(visited));
 		}
-
-//		System.out.println(Arrays.toString(peoples));
-//		System.out.println(list);
 		if(result==Integer.MAX_VALUE) System.out.println(-1);
 		else System.out.println(result);
 
