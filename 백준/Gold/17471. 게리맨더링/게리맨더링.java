@@ -3,7 +3,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -22,7 +24,7 @@ public class Main {
 		st = new StringTokenizer(br.readLine());
 		for (int i = 1; i <= N; i++) {// 1번부터 6번까지 인구수
 			peoples[i] = Integer.parseInt(st.nextToken());
-			total += peoples[i]; //합계
+			total += peoples[i]; // 합계
 		}
 
 		for (int i = 0; i <= N; i++) {
@@ -40,7 +42,7 @@ public class Main {
 
 		for (int cnt = 1; cnt <= N; cnt++) { // 개수만큼 조합
 			visited = new int[N + 1]; // visited 배열 생성
-			
+
 			for (int i = N - cnt + 1; i <= N; i++) {
 				visited[i] = 1;
 			}
@@ -59,23 +61,20 @@ public class Main {
 				if (aCnt == 0 || bCnt == 0)
 					continue;
 
-				int[] visitedAll = new int[N + 1];
 				visitedMin = new int[N + 1];
-				visitedMin[isA[0]] = 1;
-				dfs(isA[0], visitedMin, visitedAll, isA);
-				visitedMin[isB[0]] = 1;
-				dfs(isB[0], visitedMin, visitedAll, isB);
+				dfs(isA[0], isA);
+				dfs(isB[0], isB);
 
 				int ch = 0;
-				for (int i = 1; i < visitedAll.length; i++) {
-					if (visitedAll[i] == 0) {
+				for (int i = 1; i < visitedMin.length; i++) {
+					if (visitedMin[i] == 0) {
 						ch = 1;
 						break;
 					}
 				}
 				if (ch == 1)
 					continue;
-				
+
 				int aPeopleCnt = 0;
 				for (int i = 0; i < isA.length; i++) {
 					aPeopleCnt += peoples[isA[i]];
@@ -88,34 +87,40 @@ public class Main {
 
 			} while (np(visited));
 		}
-		if(result==Integer.MAX_VALUE) System.out.println(-1);
-		else System.out.println(result);
+
+		if (result == Integer.MAX_VALUE)
+			System.out.println(-1);
+		else
+			System.out.println(result);
 
 	}
 
-	private static void dfs(int ind, int[] visitedArr, int arr[], int cur[]) {
-		arr[ind] = 1;
-		List<Integer> curList = list.get(ind);
+	private static void dfs(int a, int[] arr) {
+		Queue<Integer> q = new LinkedList<>();
+		visitedMin[a] = 1;
+		q.offer(a);
 
-		for (int i = 0; i < curList.size(); i++) {
-			int nextInd = curList.get(i);
-			
-			if (visitedArr[nextInd] == 0) {
+		while (!q.isEmpty()) {
+			int cur = q.poll();
+			List<Integer> curList = list.get(cur);
+			for (int i = 0; i < curList.size(); i++) {
+				int nextInd = curList.get(i);
+				if (visitedMin[nextInd] == 1)
+					continue;
 				
 				int ch = 0;
-				for (int j = 0; j < cur.length; j++) {
-					if (cur[j] == nextInd) {
+				for (int j = 0; j < arr.length; j++) {
+					if (arr[j] == nextInd) {
 						ch = 1;
 						break;
 					}
 				}
-				
+
 				if (ch == 1) {
-					visitedArr[nextInd] = 1;
-					dfs(curList.get(i), visitedArr, arr, cur);
-					visitedArr[curList.get(i)] = 0;
+					visitedMin[nextInd] = 1;
+					q.offer(nextInd);
 				}
-				
+
 			}
 		}
 	}
