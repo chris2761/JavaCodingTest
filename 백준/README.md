@@ -11,4 +11,7 @@
   |**17281**|**[⚾ ](http://www.acmicpc.net/problem/17281)**| **[문제 설명 및 내 풀이](http://github.com/ahjinU/JavaCodingTest/tree/master/%EB%B0%B1%EC%A4%80/Gold/17281.%E2%80%85%E2%9A%BE)**| gold_4 |
    |**17471**|**[게리맨더링](http://www.acmicpc.net/problem/17471)**| **[문제 설명 및 내 풀이](http://github.com/ahjinU/JavaCodingTest/tree/master/%EB%B0%B1%EC%A4%80/Gold/17471.%E2%80%85%EA%B2%8C%EB%A6%AC%EB%A7%A8%EB%8D%94%EB%A7%81)**| gold_4 |
 |**17143**|**[낚시왕](http://www.acmicpc.net/problem/17143)**| **[문제 설명 및 내 풀이](http://github.com/ahjinU/JavaCodingTest/tree/master/%EB%B0%B1%EC%A4%80/Gold/17143.%E2%80%85%EB%82%9A%EC%8B%9C%EC%99%95)**| gold_1 |
+|**17143**|**[1로 만들기](http://www.acmicpc.net/problem/1463)**| **[문제 설명 및 내 풀이](http://github.com/ahjinU/JavaCodingTest/tree/master/%EB%B0%B1%EC%A4%80/Silver/1463.%E2%80%851%EB%A1%9C%E2%80%85%EB%A7%8C%EB%93%A4%EA%B8%B0)**| silver_3 |
+|**1149**|**[1로 만들기](http://www.acmicpc.net/problem/1149)**| **[문제 설명 및 내 풀이](http://github.com/ahjinU/JavaCodingTest/tree/master/%EB%B0%B1%EC%A4%80/Silver/1149.%E2%80%85RGB%EA%B1%B0%EB%A6%AC)**| silver_1 |
+
 
