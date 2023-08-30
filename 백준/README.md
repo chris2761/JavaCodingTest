@@ -13,5 +13,6 @@
 |**17143**|**[낚시왕](http://www.acmicpc.net/problem/17143)**| **[문제 설명 및 내 풀이](http://github.com/ahjinU/JavaCodingTest/tree/master/%EB%B0%B1%EC%A4%80/Gold/17143.%E2%80%85%EB%82%9A%EC%8B%9C%EC%99%95)**| gold_1 |
 |**17143**|**[1로 만들기](http://www.acmicpc.net/problem/1463)**| **[문제 설명 및 내 풀이](http://github.com/ahjinU/JavaCodingTest/tree/master/%EB%B0%B1%EC%A4%80/Silver/1463.%E2%80%851%EB%A1%9C%E2%80%85%EB%A7%8C%EB%93%A4%EA%B8%B0)**| silver_3 |
 |**1149**|**[RGB거리](http://www.acmicpc.net/problem/1149)**| **[문제 설명 및 내 풀이](http://github.com/ahjinU/JavaCodingTest/tree/master/%EB%B0%B1%EC%A4%80/Silver/1149.%E2%80%85RGB%EA%B1%B0%EB%A6%AC)**| silver_1 |
+|**10971**|**[외판원 순회2](http://www.acmicpc.net/problem/10971)**| **[문제 설명 및 내 풀이](http://github.com/ahjinU/JavaCodingTest/tree/master/%EB%B0%B1%EC%A4%80/Silver/10971.%E2%80%85%EC%99%B8%ED%8C%90%EC%9B%90%E2%80%85%EC%88%9C%ED%9A%8C%E2%80%852)**| silver_2 |
 
 
